@@ -31,10 +31,10 @@ html {
   --clr-texto: #ff9100;
   --clr-texto-focus: #ff6d00;
   --clr-texto-negrita: #ff5400;
-
+  --clr-texto-blanco: #F7F5FB;
   --clr-fondo-encabezado: #023e8a;
   --clr-fondo-pie: #03045e;
-  --clr-fondo-main: #00537a;
+  --clr-fondo-main: #F9AB55;
 }
 
 body {
@@ -53,6 +53,10 @@ img {
   width: 100%;
 }
 
+.overflow{
+  overflow: hidden;
+}
+
 .texto {
   font-size: min(1.5em,5vw);
   padding: 1em;
@@ -66,7 +70,9 @@ img {
   color: var(--clr-texto-negrita);
   font-weight: 700;
 }
-
+.blanco{
+  color: var(--clr-texto-blanco);
+}
 /* Encabezado */
 
 .header {
@@ -76,6 +82,7 @@ img {
   width: 100%;
   top: 0;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.25);
+  z-index: 9999;
 }
 
 .navegacion {
@@ -295,6 +302,93 @@ img {
   background-image: url(../imagenes/tarjeta8.jpg);
 }
 
+/* Pagina nosotros */
+.nosotros__sub__txt{
+  background-color: #F9AB55;
+  padding: 5em 0;
+}
+
+.nosotros__titulo{
+  background-color: #084887;
+}
+
+.nosotros__titulo__txt{
+  color: #F58A07;
+  text-align: center;
+  padding: 1em 0;
+  font-size: min(5em,10vw);
+}
+
+.nosotros__contenido{
+  background-color: #F7F5FB;
+}
+.nosotros__txt{
+  color: #031D44;
+  padding: 5em 0;
+  text-align: center;
+  font-size: min(1.5em, 5vw);
+}
+
+/* pagina galeria */
+
+.galeria__txt{
+  font-size: min(2.5em,7vw);
+}
+
+.galeria__fotos{
+  display: grid;
+  gap: 1em;
+}
+
+/* pagina contacto */
+
+.contacto__titulo{
+  background-image: url(https://www.claro.com.pe/portal/pe-2020/recursos_contenido/claro-home/93d534e5-3a10-4922-a143-490dccc78b75-banner_titulo_contactanos_desktop+28129.jpg);
+  background-position:center;
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+
+.contacto__titulo__txt{
+  text-align: left;
+  padding: 3em min(5em,6vw);
+  font-size: min(1.7em,10vw);
+}
+
+.formulario{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 1em;
+  padding: 1em;
+}
+
+.formulario__caja{
+  background-color: var(--clr-texto-blanco);
+  border: var(--clr-texto-negrita) 2px solid;
+  border-radius: 5px;
+  width: min(80vw,30rem);
+  font-size: 1.3em;
+}
+
+.input{
+  height: min(7vh,5em);
+}
+
+.formulario__mensaje{
+  aspect-ratio: 1 / 0.6;
+}
+
+.formulario__boton{
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.formulario__boton .boton{
+  width: min(35vw,14.5rem);
+}
 
 /* footer */
 
@@ -325,6 +419,38 @@ footer{
 }
 
 /* responsive */
+
+@media screen and (min-width: 426px) {
+    /* pagina galeria */
+
+  .galeria__fotos{
+    padding: 1.5rem;
+    display: grid;
+    grid-auto-columns: 1fr; 
+    grid-template-columns: repeat(4,1fr); 
+    grid-template-rows: repeat(4,min(700px,25vh)); 
+    gap: 2em 2em; 
+    grid-template-areas: 
+      "foto1 foto1 foto2 foto2"
+      "foto3 foto3 foto2 foto2"
+      "foto4 foto4 foto5 foto6"
+      "foto4 foto4 foto7 foto8"; 
+  }
+  .foto1 { grid-area: foto1; }
+  .foto2 { grid-area: foto2; }
+  .foto3 { grid-area: foto3; }
+  .foto4 { grid-area: foto4; }
+  .foto5 { grid-area: foto5; }
+  .foto6 { grid-area: foto6; }
+  .foto7 { grid-area: foto7; }
+  .foto8 { grid-area: foto8; }
+
+
+  .imagen{
+    width: 100%;
+    height: 100%;
+  }
+  }
 
 @media screen and (min-width: 769px) {
 
@@ -401,7 +527,9 @@ footer{
   }
   .principal__seccion__txt {
     width: 60vw;
-  }  
+  }
+
+  /* footer */
   footer{
     flex-flow: row;
     justify-content: space-around;
@@ -419,6 +547,16 @@ footer{
 }
 
 @media screen and (min-width: 1025px) {
+
+  .flex{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  /* pagina principal */
+
   .principal__seccion {
     flex-flow: row;
     justify-content: center;
@@ -432,8 +570,81 @@ footer{
     width: 45vw;
   }
 
+  /* pagina productos */
+
   .tarjeta__main{
     justify-content: center;
     padding: 2em 7em;
   }
+
+  /* pagina nosotros */
+  .nosotros{
+    display: grid; 
+    grid-auto-columns: 1fr; 
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 1.5fr 1.5fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "introduccion introduccion foto foto"
+      "nosotros nosotros__txt nosotros__txt vacio"; 
+  }
+
+  .nosotros__introduccion{
+    grid-area: introduccion;
+  }
+
+  .nosotros__foto{
+    grid-area: foto;
+    background-image: url(../imagenes/producto1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .nosotros__titulo{
+    grid-area: nosotros;
+  }
+  .nosotros__contenido{
+    grid-area: nosotros__txt;
+  }
+
+  .nosotros__vacio{
+    grid-area: vacio;
+    background-color: var(--clr-fondo-encabezado);
+  }
+
+  .nosotros__sub__txt{
+    padding: 0;
+    margin: 8em 7em;
+  }
+
+  .nosotros__titulo__txt{
+    padding: 0;
+    margin: 0;
+    height: fit-content;
+    transform: rotate(-90deg);
+  }
+  
+  .nosotros__txt{
+    padding: 0;
+    margin: 3em 2em;
+  }
+
+/* pagina contacto */
+
+.contacto{
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2em;
+}
+
+.contacto__texto{
+  max-width: 750px;
+}
+
+
+
+
 }
