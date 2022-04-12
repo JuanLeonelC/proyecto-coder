@@ -1,0 +1,86 @@
+.tarjeta__main {
+  padding: 1em 0em;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.tarjeta {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-end;
+  gap: 1em;
+  overflow: hidden;
+  border-radius: 25px;
+  padding-bottom: 2em;
+  padding-left: 1em;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+  background-color: gray;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+  padding: 2em 1em;
+  aspect-ratio: 1 / 1.5;
+  width: 300px;
+  margin: 0.75em 1.5em;
+  transition: transform 500ms ease;
+}
+
+.tarjeta__titulo {
+  color: $clr-texto;
+  font-family: $fnt-texto;
+  font-size: 2em;
+}
+
+.tarjeta__texto {
+  color: white;
+  font-size: 1.5em;
+}
+
+.tarjeta__boton {
+  background-color: green;
+  width: 5em;
+  font-size: 1.5em;
+  border-radius: 25px;
+  text-align: center;
+  overflow: hidden;
+  text-decoration: none;
+  color: black;
+  border: rgba(172, 255, 47, 0.301) 1px solid;
+}
+
+.tarjeta:hover {
+  transform: scale(1.05);
+}
+
+.tarjeta1 {
+  background-image: url(../imagenes/tarjeta1.jpg);
+}
+
+.tarjeta2 {
+  background-image: url(../imagenes/tarjeta2.jpg);
+}
+
+.tarjeta3 {
+  background-image: url(../imagenes/tarjeta3.jpg);
+}
+
+.tarjeta4 {
+  background-image: url(../imagenes/tarjeta4.jpg);
+}
+
+.tarjeta5 {
+  background-image: url(../imagenes/tarjeta5.jpg);
+}
+
+.tarjeta6 {
+  background-image: url(../imagenes/tarjeta6.jpg);
+}
+
+.tarjeta7 {
+  background-image: url(../imagenes/tarjeta7.jpg);
+}
+
+.tarjeta8 {
+  background-image: url(../imagenes/tarjeta8.jpg);
+}

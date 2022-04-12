@@ -1,0 +1,61 @@
+.contacto__titulo {
+  background-image: url(https://www.claro.com.pe/portal/pe-2020/recursos_contenido/claro-home/93d534e5-3a10-4922-a143-490dccc78b75-banner_titulo_contactanos_desktop+28129.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contacto__titulo__txt {
+  text-align: left;
+  padding: 3em 5em;
+  font-size: 1.7em;
+}
+
+.formulario {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 1em;
+  padding: 1em;
+}
+
+.formulario__caja {
+  background-color: $clr-texto-blanco;
+  border: $clr-texto-negrita 2px solid;
+  border-radius: 5px;
+  width: 30rem;
+  font-size: 1.3em;
+}
+
+.input {
+  height: 5em;
+}
+
+.formulario__mensaje {
+  aspect-ratio: 1 / 0.6;
+}
+
+.formulario__boton {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.formulario__boton .boton {
+  width: 14.5rem;
+}
+
+@media screen and (min-width: 1025px) {
+  .contacto {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+  }
+
+  .contacto__texto {
+    max-width: 750px;
+  }
+}

@@ -1,0 +1,53 @@
+.galeria__txt {
+  font-size: 2.5em;
+}
+
+.galeria__fotos {
+  display: grid;
+  gap: 1em;
+}
+
+@media screen and (min-width: 426px) {
+  .galeria__fotos {
+    padding: 1.5rem;
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 25vh);
+    gap: 2em 2em;
+    grid-template-areas:
+      "foto1 foto1 foto2 foto2"
+      "foto3 foto3 foto2 foto2"
+      "foto4 foto4 foto5 foto6"
+      "foto4 foto4 foto7 foto8";
+  }
+  .foto1 {
+    grid-area: foto1;
+  }
+  .foto2 {
+    grid-area: foto2;
+  }
+  .foto3 {
+    grid-area: foto3;
+  }
+  .foto4 {
+    grid-area: foto4;
+  }
+  .foto5 {
+    grid-area: foto5;
+  }
+  .foto6 {
+    grid-area: foto6;
+  }
+  .foto7 {
+    grid-area: foto7;
+  }
+  .foto8 {
+    grid-area: foto8;
+  }
+
+  .imagen {
+    width: 100%;
+    height: 100%;
+  }
+}

@@ -1,0 +1,87 @@
+.nosotros__sub__txt {
+  background-color: #f9ab55;
+  padding: 5em 0;
+}
+
+.nosotros__titulo {
+  background-color: #084887;
+}
+
+.nosotros__titulo__txt {
+  color: #f58a07;
+  text-align: center;
+  padding: 1em 0;
+  font-size: 5em;
+}
+
+.nosotros__contenido {
+  background-color: #f7f5fb;
+}
+
+.nosotros__txt {
+  color: #031d44;
+  padding: 5em 0;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+@media screen and (min-width: 1025px) {
+  .flex {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .nosotros {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1.5fr 1.5fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "introduccion introduccion foto foto"
+      "nosotros nosotros__txt nosotros__txt vacio";
+  }
+
+  .nosotros__introduccion {
+    grid-area: introduccion;
+  }
+
+  .nosotros__foto {
+    grid-area: foto;
+    background-image: url(../imagenes/producto1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .nosotros__titulo {
+    grid-area: nosotros;
+  }
+  .nosotros__contenido {
+    grid-area: nosotros__txt;
+  }
+
+  .nosotros__vacio {
+    grid-area: vacio;
+    background-color: $clr-fondo-encabezado;
+  }
+
+  .nosotros__sub__txt {
+    padding: 0;
+    margin: 8em 7em;
+  }
+
+  .nosotros__titulo__txt {
+    padding: 0;
+    margin: 0;
+    height: fit-content;
+    transform: rotate(-90deg);
+  }
+
+  .nosotros__txt {
+    padding: 0;
+    margin: 3em 2em;
+  }
+}

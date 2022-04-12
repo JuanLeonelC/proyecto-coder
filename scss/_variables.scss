@@ -1,0 +1,62 @@
+$fnt-logo: "Inspiration", cursive;
+$fnt-texto: "Fredoka", sans-serif;
+$fnt-texto-remarcado: "Ramaraja", serif;
+$fnt-texto-encabezado: "Inconsolata", monospace;
+$clr-texto: #ff9100;
+$clr-texto-focus: #ff6d00;
+$clr-texto-negrita: #ff5400;
+$clr-texto-blanco: #f7f5fb;
+$clr-fondo-encabezado: #023e8a;
+$clr-fondo-pie: #03045e;
+$clr-fondo-main: #f9ab55;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62, 5%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $clr-fondo-main;
+}
+
+.logo {
+  color: $clr-texto;
+  font-family: $fnt-logo;
+  text-align: center;
+  font-size: 2em;
+  padding: 0.5em;
+}
+
+img {
+  width: 100%;
+}
+
+.overflow {
+  overflow: hidden;
+}
+
+.texto {
+  font-size: 2em;
+  padding: 1em;
+  text-align: center;
+  color: $clr-texto;
+  font-family: $fnt-texto;
+  font-weight: 300;
+}
+
+.negrita {
+  color: $clr-texto-negrita;
+  font-weight: 700;
+}
+.blanco {
+  color: $clr-texto-blanco;
+}

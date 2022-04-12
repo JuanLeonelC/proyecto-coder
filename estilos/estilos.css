@@ -515,6 +515,8 @@ footer{
   .menu__links:hover::before {
     transform: scale(1,1);
   }
+
+  
   .principal__seccion {
     display: flex;
     flex-flow: column;
