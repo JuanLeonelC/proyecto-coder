@@ -1,9 +1,8 @@
 footer{
-    background: $clr-fondo-pie;
+    background: map-get($colores, fondo-pie);
     width: 100%;
-    display:flex;
+    @include flex(column);
     justify-content: center;
-    flex-flow: column;
     gap: 0.5em;
   }
   

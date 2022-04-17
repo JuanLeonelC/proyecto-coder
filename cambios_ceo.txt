@@ -1,0 +1,5 @@
+agregue un titulo a la pagina
+agregue imagenes y comprimi imagnes demasiado grandes
+agregue keywords en las paginas
+agregue una descripcion en las paginas
+acomode los archivos como lo pidieron en clase

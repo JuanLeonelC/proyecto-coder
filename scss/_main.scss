@@ -14,22 +14,22 @@
 }
 
 .principal__txt {
-  color: $clr-texto;
+  color: map-get($colores, texto);
   padding: 15vh 0;
   text-align: center;
-  font-family: $fnt-texto;
+  font-family: map-get($fuentes, texto);
   font-size: 1.7em;
 }
 
 .principal__boton {
   font-size: 3em;
-  color: $clr-texto;
-  font-family: $fnt-texto;
+  color: map-get($colores, texto);
+  font-family: map-get($fuentes, texto);
   display: block;
   margin-left: auto;
   margin-right: auto;
   background: transparent;
-  border: $clr-texto-negrita 3px solid;
+  border: map-get($colores, texto-negrita) 3px solid;
   border-radius: 3px;
   padding: 0.6em;
   cursor: pointer;
@@ -37,8 +37,7 @@
 
 @media screen and (min-width: 769px) {
   .principal__seccion {
-    display: flex;
-    flex-flow: column;
+    @include flex(column);
     align-items: center;
   }
 

@@ -26,13 +26,12 @@
 }
 
 @media screen and (min-width: 1025px) {
-  .flex {
-    display: flex;
-    flex-flow: column;
+  %flex{
+    @include flex(column);
     justify-content: center;
     overflow: hidden;
   }
-
+  
   .nosotros {
     display: grid;
     grid-auto-columns: 1fr;
@@ -45,6 +44,7 @@
   }
 
   .nosotros__introduccion {
+    @extend %flex;
     grid-area: introduccion;
   }
 
@@ -57,15 +57,17 @@
   }
 
   .nosotros__titulo {
+    @extend %flex;
     grid-area: nosotros;
   }
   .nosotros__contenido {
+    @extend %flex;
     grid-area: nosotros__txt;
   }
 
   .nosotros__vacio {
     grid-area: vacio;
-    background-color: $clr-fondo-encabezado;
+    background-color: map-get($colores, fondo-encabezado);
   }
 
   .nosotros__sub__txt {

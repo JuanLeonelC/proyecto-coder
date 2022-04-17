@@ -18,7 +18,7 @@ body {
 
 .logo {
   color: #ff9100;
-  font-family: "Inspiration", cursive;
+  font-family: "Inspiration";
   text-align: center;
   font-size: 2em;
   padding: 0.5em; }
@@ -34,7 +34,7 @@ img {
   padding: 1em;
   text-align: center;
   color: #ff9100;
-  font-family: "Fredoka", sans-serif;
+  font-family: "Fredoka";
   font-weight: 300; }
 
 .negrita {
@@ -75,7 +75,7 @@ img {
 
 .menu__links {
   color: #ff9100;
-  font-family: "Inconsolata", monospace;
+  font-family: "Inconsolata";
   text-decoration: none;
   font-size: 1.5em;
   opacity: 0;
@@ -188,13 +188,13 @@ img {
   color: #ff9100;
   padding: 15vh 0;
   text-align: center;
-  font-family: "Fredoka", sans-serif;
+  font-family: "Fredoka";
   font-size: 1.7em; }
 
 .principal__boton {
   font-size: 3em;
   color: #ff9100;
-  font-family: "Fredoka", sans-serif;
+  font-family: "Fredoka";
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -254,7 +254,7 @@ img {
 
 .tarjeta__titulo {
   color: #ff9100;
-  font-family: "Fredoka", sans-serif;
+  font-family: "Fredoka";
   font-size: 2em; }
 
 .tarjeta__texto {
@@ -408,7 +408,7 @@ img {
   font-size: 1.5em; }
 
 @media screen and (min-width: 1025px) {
-  .flex {
+  .nosotros__introduccion, .nosotros__titulo, .nosotros__contenido {
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -451,8 +451,8 @@ footer {
   background: #03045e;
   width: 100%;
   display: flex;
-  justify-content: center;
   flex-flow: column;
+  justify-content: center;
   gap: 0.5em; }
 
 .footer__mapa iframe {

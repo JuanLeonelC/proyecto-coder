@@ -1,14 +1,23 @@
-$fnt-logo: "Inspiration", cursive;
-$fnt-texto: "Fredoka", sans-serif;
-$fnt-texto-remarcado: "Ramaraja", serif;
-$fnt-texto-encabezado: "Inconsolata", monospace;
-$clr-texto: #ff9100;
-$clr-texto-focus: #ff6d00;
-$clr-texto-negrita: #ff5400;
-$clr-texto-blanco: #f7f5fb;
-$clr-fondo-encabezado: #023e8a;
-$clr-fondo-pie: #03045e;
-$clr-fondo-main: #f9ab55;
+$colores:(
+  texto: #ff9100,
+  texto-focus: #ff6d00,
+  texto-negrita: #ff5400,
+  texto-blanco: #f7f5fb,
+  fondo-encabezado: #023e8a,
+  fondo-pie: #03045e,
+  fondo-main: #f9ab55,
+);
+$fuentes:(
+  logo: "Inspiration",
+  texto: "Fredoka",
+  texto-remarcado: "Ramaraja",
+  texto-encabezado: "Inconsolata",
+);
+
+@mixin flex($flow) {
+  display:flex;
+  flex-flow:$flow;
+}
 
 * {
   margin: 0;
@@ -25,12 +34,12 @@ html {
 }
 
 body {
-  background-color: $clr-fondo-main;
+  background-color: map-get($colores, fondo-main);
 }
 
 .logo {
-  color: $clr-texto;
-  font-family: $fnt-logo;
+  color: map-get($colores, texto);
+  font-family: map-get($fuentes, logo);
   text-align: center;
   font-size: 2em;
   padding: 0.5em;
@@ -48,15 +57,15 @@ img {
   font-size: 2em;
   padding: 1em;
   text-align: center;
-  color: $clr-texto;
-  font-family: $fnt-texto;
+  color: map-get($colores, texto);
+  font-family: map-get($fuentes, texto);
   font-weight: 300;
 }
 
 .negrita {
-  color: $clr-texto-negrita;
+  color: map-get($colores, texto-negrita);
   font-weight: 700;
 }
 .blanco {
-  color: $clr-texto-blanco;
+  color: map-get($colores, texto-blanco);
 }

@@ -1,5 +1,5 @@
 .header {
-  background: $clr-fondo-encabezado;
+  background: map-get($colores, fondo-encabezado);
   text-align: center;
   position: sticky;
   width: 100%;
@@ -13,7 +13,7 @@
   text-align: right;
   top: 100%;
   right: 0;
-  background: $clr-fondo-encabezado;
+  background: map-get($colores, fondo-encabezado);
   width: 100%;
   transform: scale(1, 0);
   transform-origin: top;
@@ -32,8 +32,8 @@
 }
 
 .menu__links {
-  color: $clr-texto;
-  font-family: $fnt-texto-encabezado;
+  color: map-get($colores, texto);
+  font-family: map-get($fuentes, texto-encabezado);
   text-decoration: none;
   font-size: 1.5em;
   opacity: 0;
@@ -66,7 +66,7 @@
 .nav-toggle-label span::before,
 .nav-toggle-label span::after {
   display: block;
-  background: $clr-texto;
+  background: map-get($colores, texto);
   height: 2px;
   width: 2em;
   border-radius: 2px;
@@ -144,7 +144,7 @@
     content: "";
     display: block;
     height: 5px;
-    background: $clr-texto-focus;
+    background: map-get($colores, texto-focus);
     position: absolute;
     left: 0;
     right: 0;

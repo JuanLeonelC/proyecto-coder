@@ -6,8 +6,7 @@
 }
 
 .tarjeta {
-  display: flex;
-  flex-flow: column;
+  @include flex(column);
   justify-content: flex-end;
   gap: 1em;
   overflow: hidden;
@@ -27,8 +26,8 @@
 }
 
 .tarjeta__titulo {
-  color: $clr-texto;
-  font-family: $fnt-texto;
+  color: map-get($colores, texto);
+  font-family: map-get($fuentes, texto);
   font-size: 2em;
 }
 

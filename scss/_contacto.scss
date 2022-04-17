@@ -12,16 +12,15 @@
 }
 
 .formulario {
-  display: flex;
-  flex-flow: column;
+  @include flex(column);
   align-items: center;
   gap: 1em;
   padding: 1em;
 }
 
 .formulario__caja {
-  background-color: $clr-texto-blanco;
-  border: $clr-texto-negrita 2px solid;
+  background-color: map-get($colores, texto-blanco);
+  border: map-get($colores, texto-negrita) 2px solid;
   border-radius: 5px;
   width: 30rem;
   font-size: 1.3em;
@@ -36,8 +35,7 @@
 }
 
 .formulario__boton {
-  display: flex;
-  flex-flow: row;
+  @include flex(row);
   justify-content: center;
   gap: 1rem;
 }
@@ -48,8 +46,7 @@
 
 @media screen and (min-width: 1025px) {
   .contacto {
-    display: flex;
-    flex-flow: row;
+    @include flex(row);
     flex-wrap: wrap;
     justify-content: center;
     gap: 2em;
