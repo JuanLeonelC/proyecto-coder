@@ -1,5 +1,5 @@
 .tarjeta__main {
-  padding: 1em 0em;
+  margin: auto;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -82,4 +82,10 @@
 
 .tarjeta8 {
   background-image: url(../imagenes/tarjeta8.jpg);
+}
+
+@media screen and (min-width: 1025px) {
+  .tarjeta__main{
+    width: 90vw;
+  }
 }

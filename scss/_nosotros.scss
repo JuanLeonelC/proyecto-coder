@@ -1,42 +1,60 @@
-.nosotros__sub__txt {
-  background-color: #f9ab55;
-  padding: 5em 0;
+.nosotros__introduccion{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(25vh + 100px);
+  background-color: map-get($colores,fondo-main);
 }
 
-.nosotros__titulo {
-  background-color: #084887;
-}
-
-.nosotros__titulo__txt {
-  color: #f58a07;
+.nosotros__sub__txt{
+  font-size: calc(1em + 0.5vw);
   text-align: center;
-  padding: 1em 0;
-  font-size: 5em;
+  width: 80%;
 }
 
-.nosotros__contenido {
-  background-color: #f7f5fb;
+.nosotros__logo{
+  padding: 0;
+  margin: 0;
+}
+.nosotros__titulo{
+  background-color: map-get($colores, fondo-encabezado);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.nosotros__txt {
-  color: #031d44;
-  padding: 5em 0;
+.nosotros__titulo__txt{
+  font-size: calc(3em + 0.75vw);
+  color: map-get($colores, texto-blanco);
   text-align: center;
-  font-size: 1.5em;
 }
 
-@media screen and (min-width: 1025px) {
+.nosotros__contenido{
+  background-color: map-get($colores, texto-blanco);
+  height: calc(25vh + 100px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nosotros__txt{
+  text-align: center;
+  width: 90%;
+  font-size: calc(1em + 0.5vw);
+}
+
+@media screen and (min-width: 900px) {
   %flex{
     @include flex(column);
     justify-content: center;
+    align-items: center;
     overflow: hidden;
   }
   
   .nosotros {
     display: grid;
     grid-auto-columns: 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1.5fr 1.5fr;
+    grid-template-columns: repeat(1fr,4);
+    grid-template-rows: repeat(1fr,2);
     gap: 0px 0px;
     grid-template-areas:
       "introduccion introduccion foto foto"
@@ -46,6 +64,7 @@
   .nosotros__introduccion {
     @extend %flex;
     grid-area: introduccion;
+    height: 45vh;
   }
 
   .nosotros__foto {
@@ -63,6 +82,7 @@
   .nosotros__contenido {
     @extend %flex;
     grid-area: nosotros__txt;
+    height: 50vh;
   }
 
   .nosotros__vacio {
@@ -71,19 +91,12 @@
   }
 
   .nosotros__sub__txt {
-    padding: 0;
-    margin: 8em 7em;
   }
 
   .nosotros__titulo__txt {
-    padding: 0;
-    margin: 0;
-    height: fit-content;
     transform: rotate(-90deg);
   }
 
   .nosotros__txt {
-    padding: 0;
-    margin: 3em 2em;
   }
 }

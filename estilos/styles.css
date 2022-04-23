@@ -30,7 +30,7 @@ img {
   overflow: hidden; }
 
 .texto {
-  font-size: 2em;
+  font-size: calc(1em + 0.5vw);
   padding: 1em;
   text-align: center;
   color: #ff9100;
@@ -177,7 +177,12 @@ img {
   background-image: url(../imagenes/fondo_inicio.jpg);
   background-position: center;
   background-size: cover;
-  background-attachment: fixed; }
+  background-attachment: fixed;
+  height: calc(40vh + 100px);
+  max-height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
 .principal__titulo {
   font-size: 3em;
@@ -186,23 +191,13 @@ img {
 
 .principal__txt {
   color: #ff9100;
-  padding: 15vh 0;
   text-align: center;
   font-family: "Fredoka";
-  font-size: 1.7em; }
+  font-size: calc(1em + 1vw);
+  max-width: 600px; }
 
-.principal__boton {
-  font-size: 3em;
-  color: #ff9100;
-  font-family: "Fredoka";
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  background: transparent;
-  border: #ff5400 3px solid;
-  border-radius: 3px;
-  padding: 0.6em;
-  cursor: pointer; }
+.principal__seccion__txt {
+  font-size: calc(1em + 0.5vw); }
 
 @media screen and (min-width: 769px) {
   .principal__seccion {
@@ -227,7 +222,7 @@ img {
     width: 45vw; } }
 
 .tarjeta__main {
-  padding: 1em 0em;
+  margin: auto;
   display: flex;
   justify-content: center;
   flex-wrap: wrap; }
@@ -298,6 +293,10 @@ img {
 
 .tarjeta8 {
   background-image: url(../imagenes/tarjeta8.jpg); }
+
+@media screen and (min-width: 1025px) {
+  .tarjeta__main {
+    width: 90vw; } }
 
 .contacto__titulo {
   background-image: url(https://www.claro.com.pe/portal/pe-2020/recursos_contenido/claro-home/93d534e5-3a10-4922-a143-490dccc78b75-banner_titulo_contactanos_desktop+28129.jpg);
@@ -385,43 +384,62 @@ img {
     width: 100%;
     height: 100%; } }
 
+.nosotros__introduccion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(25vh + 100px);
+  background-color: #f9ab55; }
+
 .nosotros__sub__txt {
-  background-color: #f9ab55;
-  padding: 5em 0; }
+  font-size: calc(1em + 0.5vw);
+  text-align: center;
+  width: 80%; }
+
+.nosotros__logo {
+  padding: 0;
+  margin: 0; }
 
 .nosotros__titulo {
-  background-color: #084887; }
+  background-color: #023e8a;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
 .nosotros__titulo__txt {
-  color: #f58a07;
-  text-align: center;
-  padding: 1em 0;
-  font-size: 5em; }
+  font-size: calc(3em + 0.75vw);
+  color: #f7f5fb;
+  text-align: center; }
 
 .nosotros__contenido {
-  background-color: #f7f5fb; }
+  background-color: #f7f5fb;
+  height: calc(25vh + 100px);
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
 .nosotros__txt {
-  color: #031d44;
-  padding: 5em 0;
   text-align: center;
-  font-size: 1.5em; }
+  width: 90%;
+  font-size: calc(1em + 0.5vw); }
 
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 900px) {
   .nosotros__introduccion, .nosotros__titulo, .nosotros__contenido {
     display: flex;
     flex-flow: column;
     justify-content: center;
+    align-items: center;
     overflow: hidden; }
   .nosotros {
     display: grid;
     grid-auto-columns: 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1.5fr 1.5fr;
+    grid-template-columns: repeat(1fr, 4);
+    grid-template-rows: repeat(1fr, 2);
     gap: 0px 0px;
     grid-template-areas: "introduccion introduccion foto foto" "nosotros nosotros__txt nosotros__txt vacio"; }
   .nosotros__introduccion {
-    grid-area: introduccion; }
+    grid-area: introduccion;
+    height: 45vh; }
   .nosotros__foto {
     grid-area: foto;
     background-image: url(../imagenes/producto1.jpg);
@@ -431,52 +449,31 @@ img {
   .nosotros__titulo {
     grid-area: nosotros; }
   .nosotros__contenido {
-    grid-area: nosotros__txt; }
+    grid-area: nosotros__txt;
+    height: 50vh; }
   .nosotros__vacio {
     grid-area: vacio;
     background-color: #023e8a; }
-  .nosotros__sub__txt {
-    padding: 0;
-    margin: 8em 7em; }
   .nosotros__titulo__txt {
-    padding: 0;
-    margin: 0;
-    height: fit-content;
-    transform: rotate(-90deg); }
-  .nosotros__txt {
-    padding: 0;
-    margin: 3em 2em; } }
+    transform: rotate(-90deg); } }
 
 footer {
-  background: #03045e;
-  width: 100%;
   display: flex;
   flex-flow: column;
   justify-content: center;
-  gap: 0.5em; }
+  background-color: #03045e;
+  padding-bottom: 1em; }
 
-.footer__mapa iframe {
-  width: 100%; }
+.footer__logo {
+  font-size: calc(20px + 3vh); }
 
 .footer__redes {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 50% 50%; }
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  width: 80vw;
+  margin: auto; }
 
-.footer__redes a {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 5em; }
-
-@media screen and (min-width: 769px) {
-  footer {
-    flex-flow: row;
-    justify-content: space-around;
-    align-items: center;
-    padding-top: 0.5em;
-    width: 100%; }
-  .footer__logo {
-    font-size: 2em; }
-  .footer__mapa {
-    width: 30em; } }
+.footer__redes a img {
+  width: calc(20px + 10vw);
+  max-width: 100px; }

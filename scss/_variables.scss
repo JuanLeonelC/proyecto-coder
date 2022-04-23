@@ -54,7 +54,7 @@ img {
 }
 
 .texto {
-  font-size: 2em;
+  font-size: calc(1em + 0.5vw);
   padding: 1em;
   text-align: center;
   color: map-get($colores, texto);
