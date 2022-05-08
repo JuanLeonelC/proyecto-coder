@@ -69,7 +69,7 @@
 
   .nosotros__foto {
     grid-area: foto;
-    background-image: url(../imagenes/producto1.jpg);
+    background-image: url(../imagenes/hollow-knight-dark.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -87,16 +87,14 @@
 
   .nosotros__vacio {
     grid-area: vacio;
-    background-color: map-get($colores, fondo-encabezado);
+    background-image: url(../imagenes/840_560.jpeg);
+    background-position: center;
+    background-position-y: top;
+    background-color: #dddddd;
+    background-blend-mode: multiply;
   }
-
-  .nosotros__sub__txt {
-  }
-
+  
   .nosotros__titulo__txt {
     transform: rotate(-90deg);
-  }
-
-  .nosotros__txt {
   }
 }
